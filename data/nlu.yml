@@ -1,0 +1,47 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - chào
+    - hế lô
+- intent: mssv
+  examples: |
+    - mssv
+    - mã số sinh viên
+- intent: msl
+  examples: |
+    - msl
+    - mã số lớp
+- intent: ny
+  examples: |
+    - ny
+    - người yêu
+- intent: give_name
+  examples: |
+    - Mình là [Vũ Hồng Quang](name) nhé
+    - Tớ là [Vũ Hồng Quang](name) nha
+    - Anh tên là [Vũ Hồng Quang](name)
+    - Chị tên là [Vũ Hồng Quang](name)
+    - Chị là [Vũ Hồng Quang](name)
+    - Anh là [Nguyễn Tiến Anh](name)
+    - Em tên [Phạm Tuấn Anh](name) ạ
+    - [Lê Xuân An](name)
+    - [Lê Xuân An](name)
+- intent: give_dob
+  examples: |
+    - [25-15-1999](dob)
+    - [11-03-2000](dob)
+    - [25-12-1999](dob)
