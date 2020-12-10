@@ -2,15 +2,21 @@ version: '2.0'
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-
-intents: #xong
-  - greet
-  - mssv
-  - msl
-  - ny
-  - give_name
-  - give_dob
-
+intents:
+- give_dob
+- bye
+- msl
+- mssv
+- give_name
+- greet
+- give_n_and_dob
+- gt_ny
+- swear
+- swear_1
+- khen
+- gt_func
+- gt_func_linhtinh
+- xxx
 entities:
 - dob
 - name
@@ -22,21 +28,35 @@ slots:
     type: text
     auto_fill: true
 responses:
-  utter_greet:
-  - text: "Chào bạn, cho mình xin họ và tên (viết hoa, có dấu theo Họ Đệm Tên vd: Vũ Hồng Quang) nhé"
+  utter_give_name:
+  - text: 'Chào bạn, cho mình xin họ và tên (viết hoa, có dấu theo Họ Đệm Tên vd: Mình là Vũ Hồng Quang) nhé'
   utter_give_dob:
-  - text: "Chào bạn, cho mình xin ngày tháng năm sinh theo (dd-mm-yyyy) nha"
-  utter_greet_2:
-  - text: "Ui, hot nha, người con trai Hà Nội, Viện Công Nghệ Thông tin wel cơm và tui, bé bot được nuôi bằng sữa Quang thọ ở đây để giúp bạn nek"
-  - text: "Gút chóp, ơ mây zing thánh nữ dân tộc Tày :), wel căm to Viện Công Nghệ Thông Tin, chào e, a đứng đây từ chiều :)"
+  - text: "Chào bạn, cho mình xin ngày tháng năm sinh (dd-mm-yyyy) vd Mình sinh vào 09-04-1999"
+  utter_swear:
+  - text: "Hổ k gầm chó tưởng rùng vô chủ, đất cao thủ bạn k đủ tuổi vào. Oce?"
+  - text: "Không chửi bậy nha"
+  - text: "Đừng chửi bậy mà"
+  - text: "Chứng minh mình văn minh đi"
+
+  utter_swear_1:
+    - text: "Thầy Tiến với các anh ngồi dưới đấy, m ngon chửi tiếp đi :)"
   gt_ny:
   - text: "Gọi ngay vào sđt này nha 0348259665 :))"
-
+  utter_gt_func_linhtinh:
+    - text: "Mình biết đánh cầu lông, đánh bóng bàn và đánh ngừi. Hỏi lại đê k là cho ăn cái cuối á :)"
+  utter_bye:
+    - text: "Tất nhiên rồi :)"
+    - text: "Ợp cót :)"
 actions:
-  - utter_greet
-  - utter_greet_2
-  - utter_give_dob
-  - gt_ny
-  - action_mssv
-  - action_hi
-  - action_msl
+- action_greet
+- action_gt_func
+- action_msl
+- action_mssv
+- gt_ny
+- utter_give_dob
+- utter_give_name
+- utter_swear
+- action_xxx
+- utter_gt_func_linhtinh
+- utter_swear_1
+- utter_bye

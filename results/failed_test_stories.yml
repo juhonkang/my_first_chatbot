@@ -1,0 +1,7 @@
+version: "2.0"
+stories:
+- story: happy path 1 (C:\Users\Quang\AppData\Local\Temp\tmpzoafitga\4832bb13e0e9448b90b083e800595917_test_stories.yml)
+  steps:
+  - intent: give_n_and_dob  # predicted: nlu_fallback: [Lê Xuân An](name) [25-12-1999](dob)
+  - action: action_greet
+  - action: action_gt_func  # predicted: action_listen

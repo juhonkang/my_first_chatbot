@@ -2,6 +2,67 @@ version: "2.0"
 
 stories:
 
-- story: happy path
+- story: login_first
+  steps:
+    - intent: greet
+    - action: utter_give_name
+    - intent: give_name
+    - action: utter_give_dob
+    - intent: give_dob
+    - action: action_greet
+
+- story: interactive_story_1
   steps:
   - intent: greet
+  - action: utter_give_name
+  - intent: give_name
+    entities:
+    - name: Lê Xuân An
+  - slot_was_set:
+    - name: Lê Xuân An
+  - action: utter_give_dob
+  - intent: give_dob
+    entities:
+    - dob: 25-12-1999
+  - slot_was_set:
+    - dob: 25-12-1999
+  - action: action_greet
+
+
+- story: the_toxic_one
+  steps:
+    - intent: swear
+    - action: utter_swear
+
+- story: msl
+  steps:
+    - intent: msl
+    - action: action_msl
+
+- story: mssv
+  steps:
+    - intent: mssv
+    - action: action_mssv
+
+- story: xxx
+  steps:
+    - intent: xxx
+    - action: action_xxx
+
+- story: gt_func
+  steps:
+    - intent: gt_func
+    - action: action_gt_func
+
+- story: gt_func_linhtinh
+  steps:
+    - intent: gt_func_linhtinh
+    - action: utter_gt_func_linhtinh
+- story: swear_1
+  steps:
+    - intent: swear_1
+    - action: utter_swear_1
+- story: bye
+  steps:
+    - intent: bye
+    - action: utter_bye

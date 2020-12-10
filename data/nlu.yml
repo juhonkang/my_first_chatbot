@@ -16,7 +16,25 @@ nlu:
     - goodevening
     - good afternoon
     - chào
+    - chào bạn
     - hế lô
+- intent: gt_func
+  examples: |
+    - Bạn Quang đẹp trai ơi, heo me
+    - bạn quang đẹp trai ơi, heo me
+    - Bạn quang đẹp trai ơi, heo me
+    - bạn Quang đẹp trai ơi, heo me
+- intent: gt_func_linhtinh
+  examples: |
+    - Bạn có thể làm gì?
+    - Bạn biết làm những gì?
+- intent: bye
+  examples: |
+    - bye
+    - hôm khác gặp lại nhé
+    - see you later
+    - tạm biệt
+    - good bye
 - intent: mssv
   examples: |
     - mssv
@@ -25,7 +43,7 @@ nlu:
   examples: |
     - msl
     - mã số lớp
-- intent: ny
+- intent: gt_ny
   examples: |
     - ny
     - người yêu
@@ -39,9 +57,54 @@ nlu:
     - Anh là [Nguyễn Tiến Anh](name)
     - Em tên [Phạm Tuấn Anh](name) ạ
     - [Lê Xuân An](name)
+    - [Lương Thị Linh](name)
     - [Lê Xuân An](name)
+    - Tớ là [Nguyễn Thị Thu Uyên](name)
+    - Tên mình là [Nguyễn Thị Thu Uyên](name)
+    - [Nguyễn Thị Thu Uyên](name)
+    - Mình là [Nguyễn Thị Thu Uyên](name)
+    - Mình là [Hoàng Thị Hảo](name)
 - intent: give_dob
   examples: |
     - [25-15-1999](dob)
     - [11-03-2000](dob)
     - [25-12-1999](dob)
+    - [27-10-1999](dob)
+    - [25-12-1999](dob)
+    - Mình sinh ngày [25-15-1999](dob)
+    - Ngày sinh của mình là [09-04-1999](dob)
+    - [09-04-1999](dob)
+    - Mình sinh vào [09-04-1999](dob)
+    - Mình sinh ngày [25-15-1999](dob)
+    - Mình sinh ngày [10-01-1999](dob)
+- intent: give_n_and_dob
+  examples: |
+    - [Lê Xuân An](name) [25-12-1999](dob)
+    - [Lương Thị Linh](name) [27-10-1999]
+    - [10-01-1999](dob) [Hoàng Thị Hảo](name)
+- intent: swear
+  examples: |
+    - Địt mẹ mày
+    - Phèn vãi loz
+    - Con đĩ
+    - Chó đẻ
+    - Súc vật
+    - Súc sinh
+    - Đầu buồi
+    - Fuck you
+    - Con chó
+- intent: swear_1
+  examples: |
+    - T cứ chửi đấy
+    - Bố m cứ chửi đấy
+- intent: khen
+  examples: |
+    - Good job!
+    - Uầy bạn Quang đẹp trai thế
+    - Chất
+    - Được
+    - Đc
+    - Quá ổn
+- regex: dob
+  examples: |
+    - \d{1,2}-\d{1,2}-\d{4}
